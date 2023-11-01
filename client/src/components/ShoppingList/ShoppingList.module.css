@@ -11,8 +11,6 @@
   background-color: #8baa36;
   color: #fafafa;
   border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.5;
@@ -20,7 +18,7 @@
 }
 .rightHead {
   display: flex;
-  gap: 10px;
+  gap: 24px;
 }
 .ingredients {
   display: flex;
@@ -30,6 +28,15 @@
 /* IngredientItem */
 .ingredient {
   display: flex;
+  justify-content: space-between;
+}
+.ingredientWrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.measureWrapper {
+  composes: ingredientWrapper;
+  gap: 46px;
 }
 .imageOfIngredient {
   display: flex;
@@ -56,8 +63,54 @@ img {
   background-color: #8baa36;
   font-weight: 600;
   font-size: 10px;
-  line-height: calc(15 / 10);
+  line-height: 1.5;
   text-align: center;
   color: #fafafa;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .head {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .rightHead {
+    gap: 78px;
+  }
+  .ingredients {
+    margin-top: 50px;
+    gap: 44px;
+  }
+  .ingredient {
+    padding-bottom: 43px;
+  }
+  .imageOfIngredient {
+    width: 93px;
+    height: 97px;
+  }
+  img {
+    width: 81px;
+    height: 81px;
+  }
+  .amountOfIngredient {
+    padding: 4px 8px;
+    font-size: 18px;
+    line-height: 1.5;
+    width: 92px;
+  }
+  .measureWrapper {
+    gap: 110px;
+  }
+  .ingredientWrapper {
+    gap: 78px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .head {
+    padding: 17px 40px;
+  }
+  .rightHead {
+    gap: 142px;
+  }
 }

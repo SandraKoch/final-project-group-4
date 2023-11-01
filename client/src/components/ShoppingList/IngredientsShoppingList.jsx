@@ -2,11 +2,11 @@ import { useDispatch, useSelector } from "react-redux";
 import IngredientItem from "./IngredientItem";
 import css from "./ShoppingList.module.css";
 import { useEffect } from "react";
-import { shoppingListSelector } from "../../redux/shoppingList/shoppingListSelectors";
 import {
   deleteFromShoppingList,
   getShoppingList,
-} from "../../redux/shoppingList/shoppingListAction";
+} from "../../redux/shoppingList/operations";
+import { shoppingListSelector } from "../../redux/shoppingList/selectors";
 
 const IngredientsShoppingList = () => {
   const dispatch = useDispatch();
@@ -35,6 +35,7 @@ const IngredientsShoppingList = () => {
           <IngredientItem
             ingredient={ingredients}
             handleDelete={handleDelete}
+            key={ingredients.ttl}
           />
         ))}
       </div>
