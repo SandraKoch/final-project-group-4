@@ -13,16 +13,9 @@ const IngredientItem = ({ ingredient, handleDelete }) => {
 
       <div className={css.measureWrapper}>
         <p className={css.amountOfIngredient}>{measure}</p>
-        <button type="button" onClick={() => handleDelete(id)}>
-          <svg
-            width="20"
-            height="20"
-            fill="#8baa36"
-            onClick={() => handleDelete(id)}
-          >
-            <use href="./images/icons/icons.svg#icon-close"></use>
-          </svg>
-        </button>
+        <svg className={css.close} onClick={() => handleDelete(id)}>
+          <use href="./images/icons/icons.svg#icon-search"></use>
+        </svg>
       </div>
     </section>
   );

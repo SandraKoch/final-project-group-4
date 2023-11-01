@@ -68,7 +68,13 @@ img {
   color: #fafafa;
   border-radius: 4px;
 }
-
+.close {
+  stroke: #000000;
+  fill: #000000;
+  width: 8px;
+  height: 8px;
+  z-index: 9;
+}
 @media screen and (min-width: 768px) {
   .head {
     padding: 20px;
