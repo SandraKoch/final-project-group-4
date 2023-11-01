@@ -14,6 +14,10 @@ const userSchema = new Schema({
     type: String,
     required: [true, "Password is required"],
   },
+  shoppingList: {
+    type: Array,
+    default: [],
+  },
 });
 
 const User = model("users", userSchema);

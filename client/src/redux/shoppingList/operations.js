@@ -1,12 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3000/";
+axios.defaults.baseURL = "http://localhost:3001/api/";
 
 export const getShoppingList = createAsyncThunk(
-  "shoppingList/get-list",
+  "shoppingList/list",
   async (_, thunkAPI) => {
     try {
-      const res = await axios.get(`shopping-list/ingredients/list`);
+      const res = await axios.get(`shopping-list/list`);
+      console.log(res);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

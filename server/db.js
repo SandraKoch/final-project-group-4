@@ -15,7 +15,7 @@ const disconnect = async () => {
     await mongoose.disconnect();
   } catch (e) {
     console.error(e);
-    throw new Error("Cannot disconnet from database");
+    throw new Error("Cannot disconnect from database");
   }
 };
 

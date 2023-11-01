@@ -50,6 +50,10 @@ const recipeSchema = new Schema({
     type: Array,
     default: null,
   },
+  ingredients: {
+    type: Array,
+    default: [],
+  },
 });
 
 const Recipes = model("recipes", recipeSchema);
