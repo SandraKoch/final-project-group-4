@@ -1,0 +1,9 @@
+.iconSearch {
+  stroke: #000000;
+  fill: none;
+  width: 24px;
+  height: 24px;
+}
+.iconSearch:hover {
+  stroke: #8baa36;
+}
