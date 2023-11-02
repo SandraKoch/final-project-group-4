@@ -2,11 +2,12 @@ import css from "./ShoppingList.module.css";
 
 const IngredientItem = ({ ingredient, handleDelete }) => {
   const { id, ttl, measure, thb } = ingredient;
+
   return (
     <section className={css.ingredient}>
       <div className={css.ingredientWrapper}>
         <div className={css.imageOgIngredient}>
-          <img src={thb} alt="ttl" />
+          <img src={thb} alt="ttl" className={css.image} />
         </div>
         <p className={css.nameOfIngredient}>{ttl}</p>
       </div>

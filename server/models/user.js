@@ -14,10 +14,26 @@ const userSchema = new Schema({
     type: String,
     required: [true, "Password is required"],
   },
-  shoppingList: {
+  favorites: {
     type: Array,
     default: [],
   },
+  shoppingList: [
+    {
+      ingredient: {
+        type: Schema.Types.ObjectId,
+        ref: "ingredients",
+      },
+      ingredientId: {
+        type: String,
+        default: "",
+      },
+      measure: {
+        type: String,
+        required: [true],
+      },
+    },
+  ],
 });
 
 const User = model("users", userSchema);

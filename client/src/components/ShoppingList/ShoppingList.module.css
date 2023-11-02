@@ -4,6 +4,9 @@
   line-height: 1;
   margin: 50px 0 50px 16px;
 }
+.shoppingList {
+  margin-bottom: 100px;
+}
 .head {
   padding: 10px;
   display: flex;
@@ -46,7 +49,7 @@
   width: 60px;
   height: 60px;
 }
-img {
+.image {
   width: 48px;
   height: 48px;
 }
@@ -75,6 +78,14 @@ img {
   height: 8px;
   z-index: 9;
 }
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
 @media screen and (min-width: 768px) {
   .head {
     padding: 20px;
@@ -95,7 +106,7 @@ img {
     width: 93px;
     height: 97px;
   }
-  img {
+  .image {
     width: 81px;
     height: 81px;
   }
