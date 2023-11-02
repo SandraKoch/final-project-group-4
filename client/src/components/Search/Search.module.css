@@ -1,29 +1,82 @@
-.search-container {
-    display: block;
-    align-items: center;
-    margin-bottom: 24px;
+.searchWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.searchList {
+  margin-bottom: 40px;
+}
+.searchItem:not(:last-child) {
+  margin-bottom: 30px;
+}
+.noRecipesImg {
+  width: 208px;
+  height: 133px;
+  margin: auto;
+  background-image: url('../../images/backgrounds/search-desktop.png');
+  background-size: contain;
+  margin-bottom: 33px;
+}
+.noRecipesText {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 101px;
+  opacity: 0.5;
+}
+.paginationWrp {
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 768px) {
+  .searchList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    margin-bottom: 35px;
   }
-  
-  .search-Input {
-    padding-left: 30px;
-    border: 1px solid #F0F0F0;
-    border-radius: 15px 40px 15px 40px;
-    margin-right: 8px;
-    width: 295px;
-    height: 53px;
-    outline: none;
+  .searchItem {
+    margin: 15px;
   }
-  
-  .search-button {
-    margin-left: -120px;
-    width: 113px;
-    height: 53px;
-    padding: 16px 32px 16px 32px;
-    background-color: #8baa36;
-    color: #fff;
-    border: none;
-    border-radius: 15px 40px 15px 40px;
-    cursor: pointer;
+  .searchItem:not(:last-child) {
+    margin-bottom: 15px;
   }
-  
-  
+  .searchWrapper {
+    margin-top: 40px;
+    margin-bottom: 45px;
+  }
+  .noRecipesImg {
+    width: 350px;
+    height: 225px;
+    margin-bottom: 33px;
+  }
+  .noRecipesText {
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 200px;
+    color: var(--secondaryTextColor);
+  }
+}
+.paginationWrp {
+  padding-bottom: 200px;
+}
+@media screen and (min-width: 1440px) {
+  .searchList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+  }
+  .searchItem {
+    margin: 50px 7px;
+  }
+  .searchItem:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .searchWrapper {
+    margin-bottom: 70px;
+  }
+}

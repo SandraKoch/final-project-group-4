@@ -1,4 +1,3 @@
-import { MainPage } from "../components/MainPage";
 import { WelcomePage } from "../components/WelcomePage";
 import { useAuth } from "../hooks/useAuth";
 import Main from "./Main/Main";

@@ -1,0 +1,71 @@
+.block {
+    background-color: #FAFAFA;
+    width: 225px;
+    height: 92px;
+    padding: 10px;
+    border-radius: 6px;
+    position: absolute;
+    top: 350px;
+    margin-left: 50vw;
+
+    @media screen and (min-width: 768px) {
+            width: 260px;
+            height: 100px;
+            margin-left: 60vw;
+
+            @media screen and (min-width: 1280px) {
+                    width: 298px;
+                    height: 114px;
+                    margin-left: 60vw;
+                }
+        }
+}
+.blockText {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.23999999463558197px;
+    text-align: left;
+    color: #3E4462;
+
+    @media screen and (min-width: 768px) {
+            font-size: 14px;
+            line-height: 18px;
+
+            @media screen and (min-width: 1280px) {
+                    line-height: 20px;
+                }
+        }
+}
+.blockText span {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #8BAA36;
+
+    @media screen and (min-width: 768px) {
+            font-size: 14px;
+            line-height: 18px;
+    
+            @media screen and (min-width: 1280px) {
+                line-height: 20px;
+            }
+        }
+}
+.blockLink {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.20000000298023224px;
+    color: #3E4462;
+    text-decoration: none;
+    margin-left: 130px;
+    cursor: pointer;
+
+    @media screen and (min-width: 1280px) {
+        margin-left: 180px;
+    }
+}

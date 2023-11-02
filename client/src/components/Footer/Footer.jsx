@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 import s from './Footer.module.css';
+import IconLogoFooter from "../Icons/IconLogoFooter/IconLogoFooter";
+import IconFacebook from "../Icons/IconFacebook/IconFacebook";
+import IconYouTube from "../Icons/IconYouTube/IconYouTube";
+import IconTwitter from "../Icons/IconTwitter/IconTwitter";
+import IconInstagram from "../Icons/IconInstagram/IconInstagram";
+// import IconEmail from "../Icons/IconEmail/IconEmail";
 
 const Footer = () => {
     return (
@@ -9,15 +15,13 @@ const Footer = () => {
                     <div className={s.wrapper}>
                         <div>
                             <div className={s.logoPart}>
-                                <Link className={s.logo} to="/">
-                                    <svg width="32" height="32">
-                                        <use href="./images/icons/icons.svg#icon-logo"></use>
-                                    </svg>
+                                <Link to="/">
+                                    <IconLogoFooter />
                                 </Link>
                                 <h2>So Yummy</h2>
                             </div>
                             <ul className={s.description}>
-                                <li>Database of recipes that can be replenished </li>
+                                <li className={s.descriptionEl}>Database of recipes that can be replenished </li>
                                 <li>Flexible search for desired and unwanted ingredients</li>
                                 <li>Ability to add your own recipes with photos</li>
                                 <li>Convenient and easy to use</li>
@@ -65,30 +69,22 @@ const Footer = () => {
                 <ul className={s.media}>
                     <li>
                         <a href="https://www.facebook.com/">
-                            <svg width="20" height="20">
-                                <use href="./images/icons/icons.svg#icon-facebook"></use>
-                            </svg>
+                            <IconFacebook />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.youtube.com/">
-                            <svg width="20" height="20">
-                                <use href="./images/icons/icons.svg#icon-youtube"></use>
-                            </svg>
+                            <IconYouTube />
                         </a>
                     </li>
                     <li>
                         <a href="https://twitter.com/">
-                            <svg width="20" height="20">
-                                <use href="./images/icons/icons.svg#icon-twitter"></use>
-                            </svg>
+                            <IconTwitter />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/">
-                            <svg width="20" height="20">
-                                <use href="./images/icons/icons.svg#icon-instagram"></use>
-                            </svg>
+                            <IconInstagram />
                         </a>
                     </li>
                 </ul>

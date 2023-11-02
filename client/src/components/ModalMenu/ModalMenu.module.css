@@ -1,5 +1,6 @@
 .menu {
     display: block;
+    border: 0;
     
         @media screen and (min-width: 1280px) {
             display: none;
@@ -51,4 +52,8 @@
 }
 .link:hover:focus {
     color: #8BAA36;
+}
+.modalClose {
+    background-color: inherit;
+    border: 0;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./IconSearch.module.css";
-import spriteIcon from "../../images/icons/icons.svg";
+import spriteIcon from "../../../images/icons/icons.svg";
 
 const IconSearch = () => {
   return (

@@ -1,0 +1,10 @@
+.iconYouTube {
+    stroke: #8BAA36;
+    fill: #8BAA36;
+    width: 24px;
+    height: 24px;
+}
+
+.iconYouTube:hover {
+    fill: #FAFAFA;
+}

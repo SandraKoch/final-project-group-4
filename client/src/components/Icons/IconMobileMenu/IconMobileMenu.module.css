@@ -1,0 +1,9 @@
+.iconMobileMenu {
+    stroke: #22252A;
+    width: 32px;
+    height: 32px;
+}
+
+.iconMobileMenu:hover:focus {
+    color: #8BAA36;
+}

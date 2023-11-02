@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import s from './ModalMenu.module.css';
+import IconMobileMenu from "../Icons/IconMobileMenu/IconMobileMenu";
+import IconLogo from "../Icons/IconLogo/IconLogo";
+import IconClose from "../Icons/IconClose/IconClose"
 
 const ModalMenu = () => {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -18,13 +21,9 @@ const ModalMenu = () => {
             {isModalOpen && (
                 <div className={s.modal}>
                     <div className={s.modalButtons}>
-                        <svg className={s.logo} width="40" height="40">
-                            <use href="./images/icons/icons.svg#icon-logo"></use>
-                        </svg>
-                        <button autofocus onClick={closeModal}>
-                            <svg className={s.close} width="32" height="32">
-                                <use href="./images/icons/icons.svg#icon-close"></use>
-                            </svg>
+                        <IconLogo />
+                        <button autofocus onClick={closeModal} className={s.modalClose}>
+                            <IconClose />
                         </button>
                     </div>
                     <div className={s.modalLinks}>
@@ -39,9 +38,7 @@ const ModalMenu = () => {
             )}
             {isModalOpen ? undefined : (
                 <button className={s.menu} onClick={openModal}>
-                    <svg className={s.hamburger} width="28" height="28">
-                        <use href="./images/icons/icons.svg#icon-mobile-menu"></use>
-                    </svg>
+                     <IconMobileMenu />
                 </button>
             )}
         </div>

@@ -22,18 +22,24 @@ label:before {
   background: url("/src/images/icons/icons.svg#icon-email");
 }
 input {
-  background-color: inherit;
-  max-height: 38px;
-  padding-left: 35px;
-  padding-block: 10px;
-  border: 1px;
-  outline: 1px solid #fafafa;
-  border-radius: 6px;
-  color: #fafafa;
-  min-width: 167px;
-  @media screen and (min-width: 1280px) {
-    min-width: 267px;
-  }
+    background-color: inherit;
+    max-height: 38px;
+    padding-left: 35px;
+    padding-block: 10px;
+    border: 1px;
+    outline: 1px solid #38393a;
+    border-radius: 6px;
+    color: #FAFAFA;
+    min-width: 167px;
+    @media screen and (min-width: 1280px) {
+            min-width: 267px;
+            width: 339px;
+            padding-block: 20px;
+        }
+}
+input::placeholder {
+    font-size: 12px;
+    color: #FAFAFA;
 }
 .footerForm button {
   width: 239px;
@@ -62,21 +68,26 @@ span {
   color: #fafafa;
 }
 .logoPart {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+        }
 }
 .logo {
   cursor: pointer;
 }
 .logoPart h2 {
-  font-family: Poppins;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 0.015em;
-  text-align: left;
-  color: #fafafa;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.015em;
+    color: #FAFAFA;
 }
 .footerLink {
   color: #fafafa;
@@ -107,7 +118,12 @@ span {
   }
 }
 .footerForm button {
-  width: 204px;
+    width: 204px;
+
+    @media screen and (min-width: 1280px) {
+        width: 339px;
+        height: 40px;
+        }
 }
 .listLinks {
   display: flex;
@@ -132,15 +148,14 @@ span {
   line-height: 10px;
 }
 .media {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  list-style: none;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 .footer {
-  /* position: fixed; */
-  bottom: 0px;
-  width: 100%;
+    width: 100%;
 }
 .description {
   display: none;
@@ -151,14 +166,17 @@ span {
   letter-spacing: -0.02em;
   text-align: left;
 
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-  }
+    @media screen and (min-width: 768px) {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 }
 .wrapper {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -191,11 +209,13 @@ span {
   text-align: left;
 }
 .wrapperOutside {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-  @media screen and (min-width: 768px) {
-    align-items: center;
+    @media screen and (min-width: 768px) {
+        margin-top:30px;
+            align-items: center;
 
     @media screen and (min-width: 1280px) {
       flex-direction: row;

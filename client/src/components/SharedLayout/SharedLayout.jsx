@@ -7,7 +7,8 @@ import ModalMenu from "../ModalMenu/ModalMenu";
 import Footer from "../Footer/Footer";
 import s from "./SharedLayout.module.css";
 import { useAuth } from "../../hooks/useAuth";
-import IconSearch from "../IconSearch/IconSearch";
+import IconSearch from "../Icons/IconSearch/IconSearch";
+import IconLogo from "../Icons/IconLogo/IconLogo";
 
 const SharedLayout = () => {
   const { isLoggedIn } = useAuth();
@@ -16,9 +17,7 @@ const SharedLayout = () => {
       {isLoggedIn && (
         <header className={s.header}>
           <Link to="/">
-            <svg className={s.logo} width="40" height="40">
-              <use href="./images/icons/icons.svg#icon-logo"></use>
-            </svg>
+            <IconLogo />
           </Link>
           <nav className={s.nav}>
             <Link className={s.link} to="/categories/:categoryName">
@@ -38,7 +37,6 @@ const SharedLayout = () => {
             </Link>
             <Link className={s.link} to="/search">
               <IconSearch />
-              <span className={s.searchText}>Search</span>
             </Link>
           </nav>
           <div className={s.menu}>

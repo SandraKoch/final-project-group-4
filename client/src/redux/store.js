@@ -2,6 +2,7 @@ import storage from "redux-persist/lib/storage";
 import { configureStore } from "@reduxjs/toolkit";
 import { categoriesReducer } from "./CategoriesRedux/categoriesSlice";
 import { recipeReducer } from "./CategoriesRedux/recipesSlice";
+import { searchReducer } from "../redux/search/searchSlice"; // Dodaj import searchReducer
 import {
   persistStore,
   persistReducer,
@@ -18,7 +19,7 @@ import { shoppingReducer } from "./shoppingList/shoppingListSlice";
 const authPersistConfig = {
   key: "auth",
   storage,
-  whitelist: ["token"],
+  whitelist: ["token", "isLoggedIn", "user"],
 };
 
 export const store = configureStore({
@@ -27,6 +28,7 @@ export const store = configureStore({
     categories: categoriesReducer,
     recipes: recipeReducer,
     shoppingList: shoppingReducer,
+    search: searchReducer, // Dodaj searchReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

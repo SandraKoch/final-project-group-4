@@ -8,21 +8,30 @@ export const WelcomePage = () => {
     navigate("/register", { replace: true });
   };
 
-  const handleLoginClick = () => {
-    navigate("/login", { replace: true });
+  const handleSigninClick = () => {
+    navigate("/signin", { replace: true });
   };
   return (
     <div className={css.background}>
       <div className={css.contentWrap}>
-        <h3>Welcome to the app!</h3>
+        <button className={css.logo}>
+          <svg width="68" height="68">
+            <use href="./images/icons/icons.svg#icon-facebook"></use>
+          </svg>
+        </button>
+        <h3 className={css.headline}>Welcome to the app!</h3>
         <p className={css.text}>
           This app offers more than just a collection of recipes - it is
           designed to be your very own digital cookbook. You can easily save and
           retrieve your own recipes at any time.
         </p>
         <div>
-          <button onClick={handleRegisterClick}>Registration</button>
-          <button onClick={handleLoginClick}>Sign in</button>
+          <button className={css.filledbutton} onClick={handleRegisterClick}>
+            Registration
+          </button>
+          <button className={css.outlinedbutton} onClick={handleSigninClick}>
+            Sign in
+          </button>
         </div>
       </div>
     </div>
