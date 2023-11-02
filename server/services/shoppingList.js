@@ -1,55 +1,43 @@
-// const { Ingredients } = require("../models/ingredients");
+const { Ingredients } = require("../models/ingredients");
+const { ShoppingList } = require("../models/shoppingList");
 
-// // const getAllIngredients = async () => {
-// //   try {
-// //     return await Ingredients.find();
-// //   } catch (e) {
-// //     console.error(e);
-// //   }
-// // };
+const getShoppingList = async (owner) => {
+  const result = await ShoppingList.find({
+    owner,
+  });
+  return result;
+};
 
-// const { Recipes } = require("../models/recipes");
-// const { User } = require("../models/user");
+const addToShoppingList = async (owner, ingredient) => {
+  const { iid, number } = ingredient;
+  const ingredientId = await Ingredients.findById(iid);
 
-// const addToShoppingList = async (req, res) => {
-//   try {
-//     const { user } = req;
-//     const { recipeId, ingredientId } = req.query;
-//     const recipe = await Recipes.findById(recipeId);
-//     const [ingredient] = recipe.ingredients.filter(
-//       ({ id }) => id.toString() === ingredientId
-//     );
-//     const result = await Ingredients.findById(ingredientId);
-//     if (!result) {
-//       throw new Error(`Ingredient is not found`);
-//     }
-//     user.shoppingList.push({
-//       id: result.id.toString(),
-//       measure: result.measure,
-//       ttl: result.ttl,
-//       thb: result.thb,
-//     });
-//     await user.save();
-//     res.status(200).json({ data: user.shoppingList });
-//   } catch (e) {
-//     console.error(e);
-//   }
-// };
+  if (!ingredientId) {
+    return null;
+  }
+  const { ttl, thb } = ingredientId;
+  const ingredientToShoppingList = {
+    iid,
+    ttl,
+    thb,
+    number,
+    owner,
+  };
+  const result = await ShoppingList.create(ingredientToShoppingList);
+  return result;
+};
 
-// const deleteFromShoppingList = async (req, res) => {
-//   try {
-//     const { user } = req;
-//     const { ingredientId } = req.query;
-//     const newShoppingList = await User.findByIdAndUpdate(
-//       user._id,
-//       {
-//         shoppingList: { id: ingredientId },
-//       },
-//       { new: true }
-//     );
-//     res.status(200).json({ newShoppingList });
-//   } catch (e) {
-//     console.error(e);
-//   }
-// };
-// module.exports = { addToShoppingList, deleteFromShoppingList };
+const deleteFromShoppingList = async (owner, iid, number) => {
+  const result = await ShoppingList.findOneAndDelete({
+    owner,
+    iid,
+    number,
+  });
+  return result;
+};
+
+module.exports = {
+  getShoppingList,
+  addToShoppingList,
+  deleteFromShoppingList,
+};

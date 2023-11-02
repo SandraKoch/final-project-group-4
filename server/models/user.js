@@ -18,22 +18,10 @@ const userSchema = new Schema({
     type: Array,
     default: [],
   },
-  shoppingList: [
-    {
-      ingredient: {
-        type: Schema.Types.ObjectId,
-        ref: "ingredients",
-      },
-      ingredientId: {
-        type: String,
-        default: "",
-      },
-      measure: {
-        type: String,
-        required: [true],
-      },
-    },
-  ],
+  shoppingList: {
+    type: [],
+    default: [],
+  },
 });
 
 const User = model("users", userSchema);

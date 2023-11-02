@@ -6,11 +6,8 @@ const {
 } = require("../../controllers/shoppingList");
 const shoppingListRouter = express.Router();
 
-// shoppingListRouter.get("/list", getShoppingListHandler);
+shoppingListRouter.get("/list", getShoppingListHandler);
 // shoppingListRouter.post("/add-ingredient", addToShoppingListHandler);
-// shoppingListRouter.delete(
-//   "/remove-ingredient/:id",
-//   deleteFromShoppingListHandler
-// );
+// shoppingListRouter.delete("/remove-ingredient", deleteFromShoppingListHandler);
 
 module.exports = { shoppingListRouter };

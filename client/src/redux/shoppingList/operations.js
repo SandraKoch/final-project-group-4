@@ -7,7 +7,6 @@ export const getShoppingList = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios.get(`shopping-list/list`);
-      console.log(res.data);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

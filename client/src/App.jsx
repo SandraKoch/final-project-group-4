@@ -1,7 +1,6 @@
 import { lazy } from "react";
 import "./index.css";
 import { Route, Routes } from "react-router-dom";
-import ShoppingList from "./pages/ShoppingList";
 import { useDispatch } from "react-redux";
 import { useAuth } from "./hooks/useAuth";
 import { refreshToken } from "./redux/auth/authSlice";
@@ -15,9 +14,9 @@ import { Categories } from "./pages/Categories/Categories";
 const Main = lazy(() => import("./pages/Main/Main"));
 // const Categories = lazy(() => import('...'));
 // const AddRecipe = lazy(() => import('...'));
-// const MyRecipes = lazy(() => import('...'));
+const MyRecipes = lazy(() => import("./pages/MyRecipesPage/MyRecipesPage"));
 // const Favorite = lazy(() => import('...'));
-// const ShoppingList = lazy(() => import('...'));
+const ShoppingList = lazy(() => import("./pages/ShoppingList"));
 // const Search = lazy(() => import('...'));
 
 export const App = () => {
@@ -39,9 +38,9 @@ export const App = () => {
         <Route index element={<Home />} />
         {/* 
         <Route path="/add" element={<AddRecipe />} />
-        <Route path="/my" element={<MyRecipes />} />
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/search" element={<Search />} /> */}
+        <Route path="/my" element={<MyRecipes />} />
         <Route path="/shopping-list" element={<ShoppingList />}></Route>/
         <Route path="/categories/:categoryName" element={<Categories />} />
         <Route path="*" element={<NotFound />} />
