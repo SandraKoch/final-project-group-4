@@ -20,7 +20,7 @@ export const Select = ({ handleInputChange }) => {
 
   return (
     <div className={css.category__box}>
-      <label htmlFor="category" className={css.category__label}>
+      <label htmlFor="category" className={css.label}>
         Category
       </label>
       <div className={css.select__box}>
@@ -41,6 +41,19 @@ export const Select = ({ handleInputChange }) => {
             </option>
           ))}
         </select>
+        <svg
+          fill="none"
+          id="icon-down"
+          viewBox="0 0 32 32"
+          className={css.arrow}
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="5.333"
+            d="M29.333 9.333 16 22.666 2.667 9.333"
+          />
+        </svg>
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import css from "../FollowUs/FollowUs.module.css";
 
 export const FollowUs = () => {
   return (
-    <div style={{ position: "absolute", left: "62em", top: "15em" }}>
-      <h3>Follow Us</h3>
+    <div className={css.box}>
+      <h3 className={css.h3}>Follow Us</h3>
       <div
         style={{
           display: "flex",

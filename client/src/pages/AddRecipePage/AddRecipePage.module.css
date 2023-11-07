@@ -1,83 +1,3 @@
-:root {
-  /* ------main colors----- */
-  --main-green: #8baa36;
-  --main-black: #1e1f28;
-  --main-white: #fafafa;
-  --main-text: #3e4462;
-  --total-white: #ffffff;
-  /*------background colors------*/
-  --background-main-dark: #1e1f28;
-  --background-additional-dark: #2a2c36;
-  --background-light-green: #ebf3d4;
-  /*-----registration colors-----*/
-  --warning: #f6c23e;
-  --error: #e74a3b;
-  --success: #3cbc81;
-  /*-----other colors-----*/
-  --grey: #d9d9d9;
-  --categories-dark: #001833;
-  --buttons-dark: #22252a;
-  --heading-dark: #001833;
-  --navigation-dark: #23262a;
-}
-
-@mixin mobile-retina {
-  @media (max-width: 767px),
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
-    @content;
-  }
-}
-@mixin tablet {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-@mixin tablet-retina {
-  @media (min-width: 768px),
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
-    @content;
-  }
-}
-@mixin desktop {
-  @media (min-width: 1280px) {
-    @content;
-  }
-}
-@mixin desktop-retina {
-  @media (min-width: 1280px),
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
-    @content;
-  }
-}
-
-/* .container {
-  width: 100%;
-  max-width: 343px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-/* .container .box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
 .hide {
   display: none;
 }
@@ -86,7 +6,7 @@
   position: absolute;
   width: 256px;
   height: auto;
-  bottom: -97em;
+  bottom: -95em;
   z-index: -1;
 }
 
@@ -123,7 +43,7 @@
   .leftbg__image {
     width: 423px;
     height: auto;
-    bottom: -105em;
+    bottom: -75em;
   }
 
   .rectangle1 {
@@ -151,7 +71,7 @@
   .leftbg__image {
     width: 558px;
     height: auto;
-    bottom: -11em;
+    bottom: -85em;
   }
 
   .rectangle1 {
@@ -163,5 +83,8 @@
   }
   .rectangle3 {
     left: 32em;
+  }
+  .hide {
+    display: flex;
   }
 }

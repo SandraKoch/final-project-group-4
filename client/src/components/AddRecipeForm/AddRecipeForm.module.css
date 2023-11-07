@@ -2,3 +2,15 @@
   width: 100%;
   max-width: 343px;
 }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 704px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1240px;
+  }
+}

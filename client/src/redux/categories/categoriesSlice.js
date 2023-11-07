@@ -13,7 +13,7 @@ const categoriesSlice = createSlice({
   initialState,
   reducers: {
     setCategories: (state, action) => {
-      state.categories = [...action.payload];
+      state.categories = action.payload;
     },
     setSelectedCategory: (state, action) => {
       state.selectedCategory = action.payload;

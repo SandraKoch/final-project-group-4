@@ -8,7 +8,7 @@ export const getAllCategoriesList = createAsyncThunk(
   "categories/getAllCategoriesList",
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get(`/category-list`);
+      const response = await axios.get("/recipes/category-list");
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -25,20 +25,6 @@ export const getRecipesByCategory = createAsyncThunk(
       return response.data;
     } catch (error) {
       throw new Error("Error loading recipes by category", error.message);
-    }
-  }
-);
-
-// Pobieranie listy składników
-export const getIngredientsList = createAsyncThunk(
-  "categories/getIngredientsList",
-  // categories czy recipes ?
-  async () => {
-    try {
-      const response = await axios.get("/ingredients/list");
-      return response.data;
-    } catch (error) {
-      throw new Error("Error loading ingredients list", error.message);
     }
   }
 );

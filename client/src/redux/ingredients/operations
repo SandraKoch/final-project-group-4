@@ -1,0 +1,13 @@
+// Pobieranie listy składników
+export const getIngredientsList = createAsyncThunk(
+  "categories/getIngredientsList",
+  // categories czy recipes ?
+  async () => {
+    try {
+      const response = await axios.get("/ingredients/list");
+      return response.data;
+    } catch (error) {
+      throw new Error("Error loading ingredients list", error.message);
+    }
+  }
+);

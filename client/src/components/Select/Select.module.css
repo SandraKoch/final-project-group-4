@@ -2,26 +2,25 @@
   display: flex;
   flex-direction: row;
   justify-content: baseline;
-  height: 83px;
-  width: 397px;
+  height: auto;
+  width: 100%;
+  max-width: 300px;
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* label {
+.label {
   color: #000;
-
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: -0.32px;
-  padding-top: 40px;
-  padding-bottom: 18px;
+  letter-spacing: -0.28px;
+  padding-top: 14px;
   opacity: 0.3;
-} */
+}
 
-.select__box select {
+.select__box .select {
   max-height: 100px;
   overflow-y: auto;
   display: flex;
@@ -32,28 +31,45 @@
   border: none;
   background-color: transparent;
   color: #000;
-  /* margin-left: 226px; */
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 14px;
   appearance: none;
-  /* background-image: url(""); Obrazek jako tło */
   background-repeat: no-repeat;
   background-position: right center;
 }
 
-/* .select::after {
-  content: "\25BC"; 
+.arrow {
+  width: 10px;
+  height: 10px;
+  stroke: #8baa36;
   position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  color: #8baa36;
+  bottom: -135px;
+  margin-left: 205px;
+  cursor: pointer;
 }
-.option {
-} */
-.category__label {
-  padding-right: 210px;
+
+@media (min-width: 768px) {
+  .category__box {
+    max-width: 393px;
+  }
+
+  .label {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    padding-top: 25px;
+    padding-bottom: 22px;
+  }
+  .arrow {
+    bottom: 93px;
+    margin-left: 281px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .arrow {
+    bottom: 110px;
+  }
 }
